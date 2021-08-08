@@ -1,0 +1,53 @@
+[
+   {
+      "name": "development",
+      "type": "postgres",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "username": "postgres",
+      "password": "7420",
+      "database": "tddproj",
+      "synchronize": true,
+      "logging": false,
+      "entities": [
+         "src/models/**/*.ts"
+      ],
+      "migrations": [
+         "src/database/migrations/**/*.ts"
+      ],
+      "subscribers": [
+         "src/database/subscribers/**/*.ts"
+      ],
+      "cli": {
+         "entitiesDir": "src/models",
+         "migrationsDir": "src/database/migrations",
+         "subscribersDir": "src/database/subscribers"
+      }
+   },
+   {
+      "name": "test",
+      "type": "postgres",
+      "host": "127.0.0.1",
+      "port": 5432,
+      "username": "postgres",
+      "password": "7420",
+      "database": "tddproj_test",
+      "synchronize": true,
+      "logging": false,
+      "dropSchema": false,
+      "entities": [
+         "src/models/**/*.ts"
+      ],
+      "migrations": [
+         "src/database/migrations/**/*.ts"
+      ],
+      "subscribers": [
+         "src/database/subscribers/**/*.ts"
+      ],
+      "cli": {
+         "entitiesDir": "src/models",
+         "migrationsDir": "src/database/migrations",
+         "subscribersDir": "src/database/subscribers"
+      }
+   }
+]
